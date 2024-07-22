@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap failure reasons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            padding: 10px;
+        }
+        .box {
+            background-color: #e9f2f1;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            padding: 5px;
+            margin: 5px;
+            flex-grow: 1;
+            text-align: center;
+            flex-basis: calc(33.333% - 10px); /* Adjusting for margin */
+            box-sizing: border-box;
+            color: rgb(4, 0, 0);
+        }
+        .box h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .box p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ccc;
+        }
+        .header .left {
+            flex: 1;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        .column h2 {
+            background-color: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .technical .box { background-color: #FF6347; } /* Technical issues color */
+        .customer .box { background-color: #4682B4; } /* Customer issues color */
+        a {
+            text-decoration: none; /* Remove underline from links */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="index.html">
+                <button class="button">Main Dashboard</button>
+            </a>
+        </div>
+        <div class="right">
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="column technical">
+            <h2>Technical Issues</h2>
+            <a href="Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2034: Depleted BP SOC Threshold Check is Failed</h2>
+                </div>
+            </a>
+            <a href="Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2014: Failed to determine Depleted BP SoCs</h2>
+                </div>
+            </a>
+            <a href="Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2026: Doors opened before swap</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2023: CANID assignment failed</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2104: API Error, Contact Station Operator</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2025: Battery orchestrator service failed</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2030: There are no supported BPs found for this vehicle</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2010: Failed to unlock mQIS dock door</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2029: Check Swap API indicated to Disallow the Swap</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2027: PLC-GPIO has problem</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2802: BLE Write Failed Twice</h2>
+                </div>
+            </a>
+        </div>
+        <div class="column customer">
+            <h2>Customer Issues</h2>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2007: Insufficient number 0 of fully charged batteries</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2101: Low Balance, Please Recharge</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2103: Update Keyfob, the keyfob is not within time limit</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2006: Insufficient number 1 of free docks to place depleted batteries</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2028: Vehicle VIN is blacklisted</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2038: Dispensed BP Door Close Check Failed Dock</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2036: Possible BP Theft Identified : during BP transaction</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2019: DockId from battery does not match with keyfob</h2>
+                </div>
+            </a>
+            
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2024: Special CAN ID before swap</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2037: Inserted BP Door Close Check Failed Dock</h2>
+                </div>
+            </a>
+            <a href="/Stationshaveswapissue.html">
+                <div class="box">
+                    <h2>2011: Door lock close status for open door is inconsistent</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

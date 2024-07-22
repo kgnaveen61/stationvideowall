@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dashboard {
+            padding: 20px;
+        }
+        .card2 {
+            border: 1px solid #3163af;
+            background-color: #2d436c;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 24px;
+            height: auto;
+            box-sizing: border-box;
+        }
+        .bar-container {
+            width: 100%;
+            background-color: #f2f2f3;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 30px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            display: flex;
+        }
+        .bar {
+            height: 100%;
+        }
+        .orange {
+            background-color: rgb(233, 60, 60);
+        }
+        .yellow {
+            background-color: rgb(229, 215, 17);
+        }
+        .green {
+            background-color: rgb(12, 174, 12);
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title h4 span {
+            color: #ffffff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Battery Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div> 
+            <a href="index.html">
+                <button class="button" style="font-size: 18px; color: #ffffff;">Main Dashboard</button>
+            </a>
+            <h1 style="font-size: 40px;">Station Preventive Maintenance Status</h1>
+        </div>
+        <a href="touchscreencalibration.html" style="text-decoration: none;">
+        <div class="card2" style="grid-column: span 2;">
+            <div class="title">
+                <h2>Station Touch Calibration</h2>
+                <h3>
+                    <span style="color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;Closed</span>, 
+                    <span style="color: rgb(233, 60, 60);">&nbsp;&nbsp;&nbsp;&nbsp;Pending</span>, 
+                    <span style="color: rgb(229, 215, 17)">&nbsp;&nbsp;&nbsp;&nbsp;Ongoing</span>
+                    <span class="number" style="float: right; color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;70%</span>
+                </h3>
+            </div>
+            <div class="bar-container">
+                <div class="bar green" style="width: 70%;"></div>
+                <div class="bar orange" style="width: 20%;"></div>
+                <div class="bar yellow" style="width: 10%;"></div>
+            </div>
+        </div>
+        </a>
+        <a href="Hvaccoolant.html" style="text-decoration: none;">
+        <div class="card2" style="grid-column: span 2;">
+            <div class="title">
+                <h2>HVAC Coolant Check</h2>
+                <h3>
+                    <span style="color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;Closed</span>, 
+                    <span style="color: rgb(233, 60, 60);">&nbsp;&nbsp;&nbsp;&nbsp;Pending</span>, 
+                    <span style="color: rgb(229, 215, 17)">&nbsp;&nbsp;&nbsp;&nbsp;Ongoing</span>
+                    <span class="number" style="float: right; color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;50%</span>
+                </h3>
+            </div>
+            <div class="bar-container">
+                <div class="bar green" style="width: 50%;"></div>
+                <div class="bar orange" style="width: 30%;"></div>
+                <div class="bar yellow" style="width: 20%;"></div>
+            </div>
+        </div>
+        </a>
+        <a href="upsbatterystatus.html" style="text-decoration: none;">
+        <div class="card2" style="grid-column: span 2;">
+            <div class="title">
+                <h2>UPS Helath Status</h2>
+                <h3>
+                    <span style="color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;Closed</span>, 
+                    <span style="color: rgb(233, 60, 60);">&nbsp;&nbsp;&nbsp;&nbsp;Pending</span>, 
+                    <span style="color: rgb(229, 215, 17)">&nbsp;&nbsp;&nbsp;&nbsp;Ongoing</span>
+                    <span class="number" style="float: right; color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;70%</span>
+                </h3>
+            </div>
+            <div class="bar-container">
+                <div class="bar green" style="width: 70%;"></div>
+                <div class="bar orange" style="width: 20%;"></div>
+                <div class="bar yellow" style="width: 10%;"></div>
+            </div>
+        </div>
+        </a>
+        <a href="Lelsensorcalibration.html" style="text-decoration: none;">
+        <div class="card2" style="grid-column: span 2;">
+            <div class="title">
+                <h2>LEL Sensor Calibration </h2>
+                <h3>
+                    <span style="color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;Closed</span>, 
+                    <span style="color: rgb(233, 60, 60);">&nbsp;&nbsp;&nbsp;&nbsp;Pending</span>, 
+                    <span style="color: rgb(229, 215, 17)">&nbsp;&nbsp;&nbsp;&nbsp;Ongoing</span>
+                    <span class="number" style="float: right; color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;40%</span>
+                </h3>
+            </div>
+            <div class="bar-container">
+                <div class="bar green" style="width: 40%;"></div>
+                <div class="bar orange" style="width: 50%;"></div>
+                <div class="bar yellow" style="width: 10%;"></div>
+            </div>
+        </div>
+        </a>
+        <a href="FDSS.html" style="text-decoration: none;">
+        <div class="card2" style="grid-column: span 2;">
+            <div class="title">
+                <h2>FDSS Refilling</h2>
+                <h3>
+                    <span style="color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;Closed</span>, 
+                    <span style="color: rgb(233, 60, 60);">&nbsp;&nbsp;&nbsp;&nbsp;Pending</span>, 
+                    <span style="color: rgb(229, 215, 17)">&nbsp;&nbsp;&nbsp;&nbsp;Ongoing</span>
+                    <span class="number" style="float: right; color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;90%</span>
+                </h3>
+            </div>
+            <div class="bar-container">
+                <div class="bar green" style="width: 90%;"></div>
+                <div class="bar orange" style="width: 5%;"></div>
+                <div class="bar yellow" style="width: 5%;"></div>
+            </div>
+        </div>
+        </a>
+        <a href="monthlypm.html" style="text-decoration: none;">
+        <div class="card2" style="grid-column: span 2;">
+            <div class="title">
+                <h2>Monthly PM</h2>
+                <h3>
+                    <span style="color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;Closed</span>, 
+                    <span style="color: rgb(233, 60, 60);">&nbsp;&nbsp;&nbsp;&nbsp;Pending</span>, 
+                    <span style="color: rgb(229, 215, 17)">&nbsp;&nbsp;&nbsp;&nbsp;Ongoing</span>
+                    <span class="number" style="float: right; color: rgb(12, 174, 12);">&nbsp;&nbsp;&nbsp;&nbsp;90%</span>
+                </h3>
+            </div>
+            <div class="bar-container">
+                <div class="bar green" style="width: 90%;"></div>
+                <div class="bar orange" style="width: 5%;"></div>
+                <div class="bar yellow" style="width: 5%;"></div>
+            </div>
+        </div>
+        </a>
+    </div>
+</body>
+</html>

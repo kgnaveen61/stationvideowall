@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .box {
+            background-color: #e9f2f1;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            flex-grow: 1;
+            text-align: center;
+            flex-basis: calc(33.333% - 10px); /* Adjusting for margin */
+            box-sizing: border-box;
+        }
+        .box1 {
+            background-color: #f5d7cd;
+            border: 1px solid #e9cdcd;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            flex-grow: 1;
+            text-align: center;
+            flex-basis: calc(33.333% - 10px); /* Adjusting for margin */
+            box-sizing: border-box;
+        }
+        .box2 {
+            background-color: #f1ebc8;
+            border: 1px solid #e6edca;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+            flex-grow: 1;
+            text-align: center;
+            flex-basis: calc(33.333% - 10px); /* Adjusting for margin */
+            box-sizing: border-box;
+        }
+        .box h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .box p {
+            font-size: 30px;
+            margin: 10px 0;
+            color: #d9534f;
+        }
+        .progress-bar {
+            background: linear-gradient(to right, rgb(255, 123, 0), #57ee06);
+            border-radius: 5px;
+            height: 20px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ccc;
+        }
+        .header .left {
+            flex: 1;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <a href="index.html">
+                <button class="button">Main Dashboard</button>
+            </a>
+        </div>
+        <div class="right">
+            <button class="button">Date Range from - to </button>
+            <button class="button">Export</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>Software Tickets</h2>
+            <p>4573</p>
+        </div>
+        <div class="box">
+            <h2>Tickets Raised Today</h2>
+            <p>186</p>
+        </div>
+        <div class="box">
+            <h2>Open Tickets</h2>
+            <p>10</p>
+        </div>
+        <div class="box">
+            <h2>Tickets Closed Today</h2>
+            <p>166</p>
+        </div>
+        <div class="box">
+            <h2>Tickets Summary</h2>
+            <div class="progress-bar" style="width: 85%;">Closed (186)</div>
+            <div class="progress-bar" style="width: 30%;">Open (10)</div>
+            <div class="progress-bar" style="width: 20%;">Hold (2)</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box1">
+            <h2>Hardware Tickets</h2>
+            <p>2000</p>
+        </div>
+        <div class="box1">
+            <h2>Tickets Raised Today</h2>
+            <p>106</p>
+        </div>
+        <div class="box1">
+            <h2>Open Tickets</h2>
+            <p>10</p>
+        </div>
+        <div class="box1">
+            <h2>Tickets Closed Today</h2>
+            <p>96</p>
+        </div>
+        <div class="box1">
+            <h2>Tickets Summary</h2>
+            <div class="progress-bar" style="width: 65%;">Closed (106)</div>
+            <div class="progress-bar" style="width: 40%;">Open (10)</div>
+            <div class="progress-bar" style="width: 20%;">Hold (2)</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box2">
+            <h2>Battery Tickets</h2>
+            <p>950</p>
+        </div>
+        <div class="box2">
+            <h2>Tickets Raised Today</h2>
+            <p>18</p>
+        </div>
+        <div class="box2">
+            <h2>Open Tickets</h2>
+            <p>4</p>
+        </div>
+        <div class="box2">
+            <h2>Tickets Closed Today</h2>
+            <p>14</p>
+        </div>
+        <div class="box2">
+            <h2>Tickets Summary</h2>
+            <div class="progress-bar" style="width: 65%;">Closed (18)</div>
+            <div class="progress-bar" style="width: 40%;">Open (4)</div>
+            <div class="progress-bar" style="width: 20%;">Hold (1)</div>
+        </div>
+    </div>
+</body>
+</html>

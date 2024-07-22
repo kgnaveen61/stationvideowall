@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts Stations details </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d5c19a;
+            color: #011004;
+        }
+        .status-off {
+            background-color: #dfcdbe;
+            color: #0b0102;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-off {
+            background-color: #49854b;
+        }
+        .title-on {
+            background-color: #d5838a;
+        }
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .left {
+            flex: 1;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <a href="index.html">
+            <button class="button">Main Dashboard</button>
+        </a>
+    </div>
+    <div class="right">
+        <button class="button">Date Range from - to </button>
+        <button class="button">Export</button>
+    </div>
+</div>
+
+<div class="section-title title-on">Alerts Station details </div>
+<table>
+    <thead>
+        <tr>
+            <th>Station ID</th>
+            <th>Date & Time</th>
+            <th>Zone</th>
+            <th>Service Location</th>
+            <th>Alerts Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>WMQI/SXMV1V1-00009</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Delhi</td>
+            <td>Delhi-Kashmere-Gate</td>
+            <td class="status-off">Emergency switch</td>
+            
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>2023-07-28 12:05:39</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td class="status-off">FDSS </td>
+            
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>2024-05-16 23:27:27</td>
+            <td>Hyderabad</td>
+            <td>Hyderabad-Tarnaka</td>
+            <td class="status-off">Smoke Detector</td>
+            
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00014</td>
+            <td>2024-04-11 20:09:16</td>
+            <td>Delhi</td>
+            <td>Delhi-Uttam-Nagar-USP</td>
+            <td class="status-off">Water level</td>
+            
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00015</td>
+            <td>2024-03-27 15:43:33</td>
+            <td>Chandigarh</td>
+            <td>IOCL-Chandigarh-Citco</td>
+            <td class="status-off">LEL </td>
+           
+        </tr>
+        
+        
+    </tbody>
+</table>
+</body>
+</html>
