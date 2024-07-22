@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Online Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d4edda;
+            color: #011004;
+        }
+        .status-off {
+            background-color: #e67b84;
+            color: #0b0102;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-off {
+            background-color: #49854b;
+        }
+        .title-on {
+            background-color: #e7767f;
+        }
+        .maindashboard-button {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            border: none;
+            padding: 10px 20px;
+            background-color: #247420;
+            color: rgb(248, 241, 241);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .maindashboard-button:hover {
+            background-color: #295fd5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="pm.html" class="maindashboard-button">
+        <button class="maindashboard-button">Main Dashboard</button>
+      </a>
+      <div class="right">
+        <div class="dropdown-container">
+            <select class="dropdown maindashboard-button">
+                <option value="option1">Zone</option>
+                <option value="option2">Bengalore</option>
+                <option value="option3">Delhi</option>
+                <option value="option2">Hyderabad</option>
+                <option value="option3">Calicut</option>
+            </select>
+        </div>
+        <button class="button">Date Range from - to </button>
+        <button class="button">Export</button>
+    </div>
+</div>
+
+
+<div class="section-title title-on">Deployed Stations Details </div>
+<table>
+    <thead>
+        <tr>
+            <th>Station ID</th>
+            <th>Date & Time</th>
+            <th>Zone</th>
+            <th>Service Location</th>
+            <th>Business Status</th>
+            <th>Station Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>WMQI/SXMV1V1-00019</td>
+            <td>2024-05-31 </td>
+            <td>Chandigarh</td>
+            <td>Chandigarh-Sector-41</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00020</td>
+            <td>2024-06-15 </td>
+            <td>Jaipur</td>
+            <td>Jaipur-Mansarovar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00021</td>
+            <td>2024-07-03 </td>
+            <td>Panchkula</td>
+            <td>Sajjag-Automobiles-Panchk</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00022</td>
+            <td>2024-07-10 </td>
+            <td>Ahmedabad</td>
+            <td>Ahmedabad-Naranpura</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00023</td>
+            <td>2024-07-20 </td>
+            <td>Pune</td>
+            <td>Pune-Hinjewadi</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00024</td>
+            <td>2024-08-01 </td>
+            <td>Kolkata</td>
+            <td>Kolkata-Saltlake</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00025</td>
+            <td>2024-08-15 </td>
+            <td>Lucknow</td>
+            <td>Lucknow-Hazratganj</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00026</td>
+            <td>2024-09-05 </td>
+            <td>Chennai</td>
+            <td>Chennai-Anna-Nagar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00027</td>
+            <td>2024-09-18 </td>
+            <td>Indore</td>
+            <td>Indore-Vijay-Nagar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00028</td>
+            <td>2024-09-25 </td>
+            <td>Surat</td>
+            <td>Surat-Adajan</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00029</td>
+            <td>2024-10-05 </td>
+            <td>Gurgaon</td>
+            <td>Gurgaon-Sector-44</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00030</td>
+            <td>2024-10-20 </td>
+            <td>Coimbatore</td>
+            <td>Coimbatore-Gandhipuram</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00031</td>
+            <td>2024-11-05 </td>
+            <td>Trivandrum</td>
+            <td>Trivandrum-Kowdiar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00032</td>
+            <td>2024-11-18 </td>
+            <td>Patna</td>
+            <td>Patna-Boring-Road</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00033</td>
+            <td>2024-12-01 </td>
+            <td>Bhopal</td>
+            <td>Bhopal-MP-Nagar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00034</td>
+            <td>2024-12-10 </td>
+            <td>Vadodara</td>
+            <td>Vadodara-Alkapuri</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00035</td>
+            <td>2024-12-25 </td>
+            <td>Ranchi</td>
+            <td>Ranchi-Main-Road</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00036</td>
+            <td>2025-01-10 </td>
+            <td>Guwahati</td>
+            <td>Guwahati-GS-Road</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00037</td>
+            <td>2025-01-25 </td>
+            <td>Agra</td>
+            <td>Agra-Sanjay-Place</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00038</td>
+            <td>2025-02-05 </td>
+            <td>Amritsar</td>
+            <td>Amritsar-Ranjit-Avenue</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00039</td>
+            <td>2025-02-20 </td>
+            <td>Jammu</td>
+            <td>Jammu-Gandhi-Nagar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00040</td>
+            <td>2025-03-10 </td>
+            <td>Lucknow</td>
+            <td>Lucknow-Gomti-Nagar</td>
+            <td>Operational </td>
+            <td>IOCL</td>
+        </tr>
+        
+    </tbody>
+</table>
+</body>
+</html>
