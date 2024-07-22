@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Support Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f3eff5;
+            color: white;
+            margin: 0;
+            padding: 10px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .header-container h1 {
+            color: #1f271b;
+            margin: 0;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2px;
+        }
+        .card {
+            background-color: #1d3766;
+            padding: 20px;
+            border-radius: 8px;
+            
+        }
+        .offchart {
+            height: 120px;
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        .card h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+            
+        }
+        .card p, .card h3 {
+            margin: 5px 0;
+        }
+        .card .large-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .card .negative {
+            font-size: 24px;
+            color: #f44336;
+        }
+        .card .positive {
+            font-size: 24px;
+            color: #4caf50;
+        }
+        .chart {
+            width: 100%;
+            height: 200px;
+            background: #444;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        .grid-span-2 {
+            grid-column: span 2;
+        }
+        
+        .linechart {
+            width: 400px;
+            height: 200px;
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        .cardoff {
+            display: flex;
+            background-color: #1d3766;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .cardoff div {
+            width: 48%;
+        }
+        .cardoff img {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1 style="color :#078217; font-size: 40px;">Station Support Dashboard</h1>
+        <a href="ActivySafetyAlerts.html" style="color: #f34029; text-decoration: none;">
+        <h1 style="color: #d35705; font-size: 40px;">Active safety POP Up Alerts</h1>
+        </a>
+    </div>
+    <div class="dashboard">
+       
+        <div class="card">
+            <h1>No of Stations Deployed : 570</h1>
+            <img src="Stations.png" alt="Stations" >
+        </div>
+        <div class="cardoff">
+            <div>
+                <h1>No of Stations OFFline</h1>
+                 
+                
+                <img src="Offline.png" alt="Image for left content" class="offchart">
+                <h2>Last Updated: 11:24 AM</h2> 
+                <a href = "NoofStationsoffline.html" style="text-decoration: none; color: #ffffff;">
+                    <h1  >Current Stations count: </h1>
+                    <h1 style="color: #f34029;">20 & 3.49 %</h1>
+                </a>
+            </div>
+            <div>
+                <h1>No of Stations Power OFF</h1>
+                
+                <img src="off.png" alt="Image for right content" class="offchart">
+                <h2>Last Updated: 11:24 AM</h2> 
+                <a href = "NoofStationsOFF.html" style="text-decoration: none; color: #ffffff;">
+                    <h1  >Current Stations count: </h1>
+                    <h1 style="color: #f34029;">20 & 3.49 %</h1>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <a href="Softwaretickets.html" style="color:#ffffff; text-decoration:none;">
+                <h1>Fresh Service Ticktes</h1>
+                <p>
+                    <span  class="large-text"> Present Month: 5500 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Today's Tickets:250 </span>
+                    <span class="large-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open : 15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closed 235</span>
+                </p>
+                <img src="freshtickets.png" alt="Freshservice" >
+            </a>
+        </div>
+        <div class="card">
+            <h1>HVAC and Back Door open status</h1>
+            <p>
+                <a href="HVACOFF.html" style="text-decoration: none;">
+                    <span style="color: #ffffff; font-size: 24px;">HVAC (29 & 3.3%)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href="Backdooropenstatus.html" style="text-decoration: none;">
+                    <span style="color: #ed9c11;font-size: 24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Backdoor(33 & 3.5%)</span>
+                </a>
+            </p>
+            <img src="HVAC&backdor.png" alt="HVAC&Backdoor">
+        </div>
+        <div class="card">
+            <a href="Swapnotworking.html" style ="text-decoration: none; color: #ffffff;">
+                <h1>Swap not working issue</h1>
+                <p class="large-text">20 & 3.49%</p>
+                <img src="Swapnotworking.png" alt="HVAC&Backdoor">
+            </a>
+        </div>
+        <div class="card">
+            <h1>Priventive Maintanence</h1>
+            <a href = "pm.html" style="color: #ffffff; text-decoration: none;">
+                <p class="large-text positive">Completed 383 & 67.76%</p>
+                <p class="large-text negative">Pending 69 & 12.24%</p>
+                <p class="large-text">Ongoing 115 & 20%</p>
+                <img src="PM.png" alt="Freshservice" >
+            </a>
+        </div>
+        <div class="card grid-span-2">
+            <h1>Docks Unavailability Status 85 & 0.98%</h1>
+            <p>
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #0c8719; font-size: 24px;">Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #128bb7; font-size: 24px;">CH Phase</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #de32c7; font-size: 24px;">CS Phase</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #60e833; font-size: 24px;">All docks -1</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #eaa35d; font-size: 24px;">CH_POL_CHG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #d3e1e6; font-size: 24px;">CH_CON_CHG</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #d35705; font-size: 24px;">Dock Temp Fault</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #cfdd10; font-size: 24px;">NO BPData</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #cd081b; font-size: 24px;">BP Type ERR</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #068290; font-size: 24px;">BLE Drive</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="Stationnumbers.html" style="text-decoration: none; color: #128bb7; font-size: 24px;">BLE Unlock Fail</a>
+            </p>
+            
+            <img src="dock.png" alt="HVAC&Backdoor">
+        </div>
+        <div class="card">
+            <a href="Enerrgymeterreading.html" style="color: #ffffff; text-decoration: none;">
+                <h1>Energy Meter status</h1>
+                <p class="large-text negative">Wrong reading 17 Stations 2.9%</p>
+                <img src="Energymeeter.png" alt="HVAC&Backdoor" class="linechart">
+            </a>
+        </div>
+        
+    </div>
+</body>
+</html>
