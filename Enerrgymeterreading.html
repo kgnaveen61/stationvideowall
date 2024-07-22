@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Meter wrong readings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d4edda;
+            color: #011004;
+        }
+        .status-off {
+            background-color: #e26905;
+            color: #0b0102;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-off {
+            background-color: #49854b;
+        }
+        .title-on {
+            background-color: #e7767f;
+        }
+        .maindashboard-button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 10px; /* Adjust as needed */
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .left {
+            flex: 1;
+        }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: rgb(5, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="left">
+        <a href="index.html">
+            <button class="button">Main Dashboard</button>
+        </a>
+    </div>
+    <div class="dropdown-container">
+        <select class="dropdown maindashboard-button">
+            <option value="option1">Zone</option>
+            <option value="option2">Bengalore</option>
+            <option value="option3">Delhi</option>
+            <option value="option2">Hyderabad</option>
+            <option value="option3">Calicut</option>
+        </select>
+    </div>
+    <button class="button maindashboard-button">Date Range from - to </button>
+    <button class="button maindashboard-button">Export</button>
+    
+</div>
+<div class="section-title title-on">EM reading < Billable Energy  17</div>
+<table>
+    <thead>
+        <tr>
+            <th>Station ID</th>
+            <th>Date & Time</th>
+            <th>Zone</th>
+            <th>Meter Readings</th>
+            <th>EM Rollout count</th>
+            <th>EM last Rollout Date</th>
+            <th>BP Charged</th>
+            <th>Billable Enegry</th>
+            <th>Diffrence Energy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>1</td>
+            <td>20-04-2024</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>1</td>
+            <td>20-04-2024</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>2</td>
+            <td>20-04-2024</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>2</td>
+            <td>20-07-2024</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00600</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>53</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >49</td>
+            <td>57</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00599</td>
+            <td>2023-10-07 02:17:19</td>
+            <td>Bangalore</td>
+            <td>114</td>
+            <td>0</td>
+            <td>NA</td>
+            <td >53</td>
+            <td>125</td>
+            <td>57</td>
+        </tr>
+       
+    </tbody>
+</table>
+</body>
+</html>
