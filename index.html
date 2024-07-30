@@ -108,14 +108,35 @@
             justify-content: start;
             align-items: start;
         }
+        .blinking-button {
+            background-color: #e678f0; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: blink 1s step-start 0s infinite;
+            position: absolute; /* Position it relative to the nearest positioned ancestor */
+            bottom:: 10px; /* Distance from the top of the page */
+            right: 10px; /* Distance from the left of the page */
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
         
     </style>
 </head>
 <body>
     <div class="header-container">
         <h1 style="color: #078217;">Station Support Dashboard</h1>
-        <a href="ActivySafetyAlerts.html" style="color: #d35705; text-decoration: none;">
-            <h1>Active Safety POP Up Alerts</h1>
+        <a href="Qnumbers.html" style="color: #d35705; text-decoration: none;">
+            <button class="blinking-button" style="align-items: end;">Active Saftey POP UP Alerts</button>
         </a>
     </div>
     <div class="dashboard">
