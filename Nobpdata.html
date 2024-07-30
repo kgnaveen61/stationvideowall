@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Online Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .status-on {
+            background-color: #d4edda;
+            color: #011004;
+        }
+        .status-off {
+            background-color: #e67b84;
+            color: #0b0102;
+        }
+        .section-title {
+            padding: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .title-off {
+            background-color: #49854b;
+        }
+        .title-on {
+            background-color: #e7767f;
+        }
+        .maindashboard-button {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            border: none;
+            padding: 10px 20px;
+            background-color: #247420;
+            color: rgb(248, 241, 241);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .maindashboard-button:hover {
+            background-color: #295fd5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="index.html" class="maindashboard-button">
+        <button class="maindashboard-button">Main Dashboard</button>
+    </a>
+        <div class="dropdown-container">
+            <select class="dropdown maindashboard-button">
+                <option value="option1">Zone</option>
+                <option value="option2">Bengalore</option>
+                <option value="option3">Delhi</option>
+            </select>
+            <button class="button maindashboard-button">Date Range from - to </button>
+            <button class="button maindashboard-button">Export</button>
+        </div>
+</div>
+
+
+<div class="section-title title-on">Stations Details Dock details </div>
+<table>
+    <thead>
+        <tr>
+            <th>Station ID</th>
+            <th>Zone</th>
+            <th>Service Location</th>
+            <th>Date & Time</th>
+            <th>Dock number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td>1<td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td>3<td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td>5<td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
