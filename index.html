@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Station Support Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file if preferred -->
     <style>
+        /* Cleaned CSS (inline for convenience) */
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f3eff5;
@@ -21,178 +23,261 @@
         .header-container h1 {
             color: #1f271b;
             margin: 0;
+            font-size: 40px;
         }
         .dashboard {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2px;
+            grid-gap: 10px;
         }
         .card {
             background-color: #1d3766;
             padding: 20px;
             border-radius: 8px;
-            
+            color: white;
         }
-        .offchart {
-            height: 120px;
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+        .header, .timestamp, .count {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .header h1, .timestamp h1, .count h2 {
+            margin: 0;
         }
         .card h2 {
             font-size: 1.5em;
             margin: 0 0 10px;
-            
         }
-        .card p, .card h3 {
-            margin: 5px 0;
-        }
-        .card .large-text {
+        .large-text {
             font-size: 24px;
             font-weight: bold;
         }
-        .card .negative {
-            font-size: 24px;
+        .negative {
             color: #f44336;
         }
-        .card .positive {
-            font-size: 24px;
+        .positive {
             color: #4caf50;
         }
-        .chart {
+        .chart, .offchart, .linechart {
             width: 100%;
-            height: 200px;
-            background: #444;
-            margin-top: 10px;
             border-radius: 8px;
+            margin-top: 10px;
+        }
+        .chart, .offchart {
+            height: 250px;
+            background: #444;
+        }
+        .linechart {
+            height: 100px;
+            width : 200px;
         }
         .grid-span-2 {
             grid-column: span 2;
         }
-        
-        .linechart {
-            width: 400px;
-            height: 200px;
-            display: block;
-            margin: 10px auto;
-            padding: 10px;
-        }
-        .cardoff {
+
+        .bar {
             display: flex;
+            margin-bottom: 10px;
+        }
+        .bar div {
+            height: 20px;
+        }
+        .yellow {
+            background-color: rgb(184, 225, 122);
+        }
+        .black {
+            background-color: #fa1f1f;
+        }
+        .blue {
             background-color: #1d3766;
-            justify-content: space-between;
-            border: 1px solid #ccc;
-            padding: 20px;
         }
-        .cardoff div {
-            width: 48%;
+        .green {
+            background-color: #41ec27;
         }
-        .cardoff img {
-            width: 100%;
-            margin-top: 10px;
+        .swap {
+            background-color: rgb(93, 248, 235);
         }
+        .bar div {
+            color: rgb(245, 237, 237);
+            display: flex;
+            font-size: 20px;
+            justify-content: start;
+            align-items: start;
+        }
+        
     </style>
 </head>
 <body>
     <div class="header-container">
-        <h1 style="color :#078217; font-size: 40px;">Station Support Dashboard</h1>
-        <a href="ActivySafetyAlerts.html" style="color: #f34029; text-decoration: none;">
-        <h1 style="color: #d35705; font-size: 40px;">Active safety POP Up Alerts</h1>
+        <h1 style="color: #078217;">Station Support Dashboard</h1>
+        <a href="ActivySafetyAlerts.html" style="color: #d35705; text-decoration: none;">
+            <h1>Active Safety POP Up Alerts</h1>
         </a>
     </div>
     <div class="dashboard">
-       
         <div class="card">
-            <h1>No of Stations Deployed : 570</h1>
-            <img src="Stations.png" alt="Stations" >
-        </div>
-        <div class="cardoff">
-            <div>
-                <h1>No of Stations OFFline</h1>
-                 
-                
-                <img src="Offline.png" alt="Image for left content" class="offchart">
-                <h2>Last Updated: 11:24 AM</h2> 
-                <a href = "NoofStationsoffline.html" style="text-decoration: none; color: #ffffff;">
-                    <h1  >Current Stations count: </h1>
-                    <h1 style="color: #f34029;">20 & 3.49 %</h1>
-                </a>
-            </div>
-            <div>
-                <h1>No of Stations Power OFF</h1>
-                
-                <img src="off.png" alt="Image for right content" class="offchart">
-                <h2>Last Updated: 11:24 AM</h2> 
-                <a href = "NoofStationsOFF.html" style="text-decoration: none; color: #ffffff;">
-                    <h1  >Current Stations count: </h1>
-                    <h1 style="color: #f34029;">20 & 3.49 %</h1>
-                </a>
-            </div>
+            <h1>No of Stations Deployed: 570</h1>
+            <img src="Stations.png" alt="Stations">
         </div>
         <div class="card">
-            <a href="Softwaretickets.html" style="color:#ffffff; text-decoration:none;">
-                <h1>Fresh Service Ticktes</h1>
+            <div>
+                <h1> Total Station Deployed 570 (100.00%)</h1>
+                <div class="bar">
+                    <div class="yellow" style="width:100%;color: rgb(67, 2, 232); "></div>
+                </div>   
+                <a href="NoofStationsoffline.html" style="text-decoration: none; color: #ffffff;">
+                    <span>
+                        <h1 style="display: inline;">No Station Offline</h1>
+                        <h2 style="display: inline; color: #f62c1e; margin-left: 10px;">30 (5.20%)</h2>
+                      </span>
+                </a>
+                <p></p>
+                <div class="bar">
+                    <div class="black" style="width: 8%;color: black;"></div>
+                </div>
+            </div>
+            <a href="NoofStationsOFF.html" style="text-decoration: none; color: #ffffff;">
+                <span>
+                    <h1 style="display: inline;">No Station OFF</h1>
+                    <h2 style="display: inline; color: #f62c1e; margin-left: 10px;">20 (4.00%)</h2>
+                  </span>
+            </a>
+            <p></p>
+                <div class="bar">
+                    <div class="black" style="width: 8%;color: black;"></div>
+                </div>
+            <p style="font-size: 20px;">Last Updated 11:40AM</p>
+        </div>
+        <div class="card">
+            <a href="Softwaretickets.html" style="color: #ffffff; text-decoration: none;">
+                <h1>Fresh Service Tickets</h1>
                 <p>
-                    <span  class="large-text"> Present Month: 5500 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Today's Tickets:250 </span>
-                    <span class="large-text"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open : 15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closed 235</span>
+                    <span class="large-text">Today's Tickets: 250 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="large-text">Open: 15 (6.00%) &nbsp;&nbsp;&nbsp;&nbsp; Closed: 235 (94.00%)</span>
                 </p>
-                <img src="freshtickets.png" alt="Freshservice" >
+                <img src="freshtickets.png" alt="Freshservice">
             </a>
         </div>
         <div class="card">
-            <h1>HVAC and Back Door open status</h1>
+            <h1>HVAC and Back Door Open Status</h1>
             <p>
-                <a href="HVACOFF.html" style="text-decoration: none;">
-                    <span style="color: #ffffff; font-size: 24px;">HVAC (29 & 3.3%)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="HVACOFF.html" style="text-decoration: none; color: #ffffff;">
+                    HVAC (29 & 3.3%)
                 </a>
-                <a href="Backdooropenstatus.html" style="text-decoration: none;">
-                    <span style="color: #ed9c11;font-size: 24px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Backdoor(33 & 3.5%)</span>
+                <a href="Backdooropenstatus.html" style="text-decoration: none; color: #ed9c11;">
+                    Backdoor (33 & 3.5%)
                 </a>
             </p>
             <img src="HVAC&backdor.png" alt="HVAC&Backdoor">
         </div>
         <div class="card">
-            <a href="Swapnotworking.html" style ="text-decoration: none; color: #ffffff;">
-                <h1>Swap not working issue</h1>
-                <p class="large-text">20 & 3.49%</p>
-                <img src="Swapnotworking.png" alt="HVAC&Backdoor">
-            </a>
+            <div>
+                
+                <a href="stationefficency.html" style="text-decoration: none; color: #ffffff;">
+                    <h1>Stations Efficiency</h1>
+                </a>
+                <h3>Station with 100% Efficiency 562 (98.00%)</h3>
+                <div class="bar">
+                    <div class="yellow" style="width:90%;color: rgb(67, 2, 232); "></div>
+                </div>
+                <h3>Station have < 95% Swap Efficiency 11 (2.00%)</h3>
+                <div class="bar">
+                    <div class="black" style="width: 8%;color: black;"></div>
+                </div>
+            </div>
+            <div>
+                
+                <a href="Swapefficiency.html" style="text-decoration: none; color: #ffffff;"> <h1>Swap Efficiency</h1></a>
+                <h3>Station with 100% Efficiency 567 (99.00%)</h3>
+                <div class="bar">
+                    <div class="yellow" style="width:95%;color: black; "> </div>
+                </div>
+                <h3>Station have < 95% Swap Efficiency 6 (1.00%)</h3>
+                <div class="bar">
+                    <div class="black" style="width: 5%;color: black;"></div>
+                    
+                </div>
+            </div>
         </div>
         <div class="card">
-            <h1>Priventive Maintanence</h1>
-            <a href = "pm.html" style="color: #ffffff; text-decoration: none;">
-                <p class="large-text positive">Completed 383 & 67.76%</p>
-                <p class="large-text negative">Pending 69 & 12.24%</p>
-                <p class="large-text">Ongoing 115 & 20%</p>
-                <img src="PM.png" alt="Freshservice" >
+            <h1>Preventive Maintenance</h1>
+            <a href="pm.html" style="color: #ffffff; text-decoration: none;">
+                <span class="large-text positive inline-text">Completed: 383 (67.76%)</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="large-text negative inline-text">Pending: 69 (12.24%)</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="large-text inline-text">Ongoing: 115 (20.40%)</span>
+                <img src="PM.png" alt="Preventive Maintenance">
             </a>
         </div>
         <div class="card grid-span-2">
-            <h1>Docks Unavailability Status 85 & 0.98%</h1>
+            <h1>Docks Unavailability Status 85 (0.98%)</h1>
             <p>
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #0c8719; font-size: 24px;">Admin</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #128bb7; font-size: 24px;">CH Phase</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #de32c7; font-size: 24px;">CS Phase</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #60e833; font-size: 24px;">All docks -1</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #eaa35d; font-size: 24px;">CH_POL_CHG</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #d3e1e6; font-size: 24px;">CH_CON_CHG</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #d35705; font-size: 24px;">Dock Temp Fault</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #cfdd10; font-size: 24px;">NO BPData</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #cd081b; font-size: 24px;">BP Type ERR</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #068290; font-size: 24px;">BLE Drive</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="Stationnumbers.html" style="text-decoration: none; color: #128bb7; font-size: 24px;">BLE Unlock Fail</a>
+                <a href="Admin.html" style="text-decoration:none; font-size: 25px; color: #0c8719;">Admin &nbsp;&nbsp;</a>
+                <a href="chphase.html" style="text-decoration: none; font-size: 25px; color: #128bb7;">CH Phase &nbsp;&nbsp;</a>
+                <a href="CSPhase.html" style="text-decoration: none;font-size: 25px; color: #de32c7;">CS Phase&nbsp;&nbsp;</a>
+                <a href="Alldock.html" style="text-decoration: none;font-size: 25px; color: #60e833;">All docks -1&nbsp;&nbsp;</a>
+                <a href="CSPhase.html" style="text-decoration: none;font-size: 25px; color: #eaa35d;">CH_POL_CHG&nbsp;&nbsp;</a>
+                <a href="CSPhase.html" style="text-decoration: none;font-size: 25px; color: #d3e1e6;">CH_CON_CHG&nbsp;&nbsp;</a>
+                <a href="DockTemp.html" style="text-decoration: none;font-size: 25px; color: #d35705;">Dock Temp Fault&nbsp;&nbsp;</a>
+                <a href="Nobpdata.html" style="text-decoration: none;font-size: 25px; color: #cfdd10;">Dock Lock &nbsp;&nbsp;</a>
+                <a href="Nobpdata.html" style="text-decoration: none;font-size: 25px; color: #d50e4d;">BLE Drive &nbsp;&nbsp;</a>
+                <a href="Nobpdata.html" style="text-decoration: none;font-size: 25px; color: #bfe2ee;">BLE Unlock Fail &nbsp;&nbsp;</a>
             </p>
-            
-            <img src="dock.png" alt="HVAC&Backdoor">
+            <img src="dock.png" alt="Docks Unavailability Status">
         </div>
         <div class="card">
             <a href="Enerrgymeterreading.html" style="color: #ffffff; text-decoration: none;">
-                <h1>Energy Meter status</h1>
-                <p class="large-text negative">Wrong reading 17 Stations 2.9%</p>
-                <img src="Energymeeter.png" alt="HVAC&Backdoor" class="linechart">
+                <div>
+                    <span style="font-size: 30px;">Energy Meter Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="large-text negative">Wrong reading 17 Stations 2.9%</span>
+                </div>
+                <div>
+                  <img src="Energymeeter.png" alt="Energy Meter Status" class="linechart">
             </a>
+            <div>
+                <a href="Swapnotworking.html" style="text-decoration: none; color: #ffffff;">
+                    <h1 style="text-align: center;">Station Having Swap Issue</h1>
+                </a>
+                <div class="bar">
+                    <div class="swap" style="width: 20%;color: rgb(6, 0, 0);"> 10 </div>
+                    <div class="white" style="width: 10%;color: rgb(236, 229, 229);">&nbsp;&nbsp; 8 AM </div>
+                    <div class="swap" style="width: 15%;color: rgb(6, 0, 0);"> 8 </div>
+                    <div class="white" style="width: 15%;color: rgb(236, 229, 229);">&nbsp;&nbsp; 12 PM </div>
+                    <div class="swap" style="width: 10%;color: rgb(6, 0, 0);"> 4 </div>
+                    <div class="white" style="width: 10%;color: rgb(236, 229, 229);">&nbsp;&nbsp; 4 PM </div>
+                </div>
+                <div class="bar">
+                    <div class="swap" style="width: 10%;color: rgb(6, 0, 0);"> 6 </div>
+                    <div class="white" style="width: 20%;color: rgb(236, 229, 229);">&nbsp;&nbsp;9 AM </div>
+                    <div class="swap" style="width: 10%;color: rgb(6, 0, 0);"> 6 </div>
+                    <div class="white" style="width: 20%;color: rgb(236, 229, 229);">&nbsp;&nbsp;1 PM </div>
+                    <div class="swap" style="width: 3%;color: rgb(6, 0, 0);"> 1</div>
+                    <div class="white" style="width: 20%;color: rgb(236, 229, 229);">&nbsp;&nbsp;5 PM </div>
+                </div>
+                <div class="bar">
+                    <div class="swap" style="width: 15%;color: rgb(6, 0, 0);"> 7 </div>
+                    <div class="white" style="width: 15%;color: rgb(236, 229, 229);"> &nbsp;&nbsp;10 AM </div>
+                    <div class="swap" style="width: 15%;color: rgb(6, 0, 0);"> 7 </div>
+                    <div class="white" style="width: 15%;color: rgb(236, 229, 229);"> &nbsp;&nbsp;2 PM </div>
+                    <div class="swap" style="width: 18%;color: rgb(6, 0, 0);"> 9 </div>
+                    <div class="white" style="width: 20%;color: rgb(236, 229, 229);">&nbsp;&nbsp;6 PM </div>
+
+                </div>
+                <div class="bar">
+                    <div class="swap" style="width: 5%;color: rgb(6, 0, 0);"> 3 </div>
+                    <div class="white" style="width: 25%;color: rgb(236, 229, 229);">&nbsp;&nbsp; 11 AM </div>
+                    <div class="swap" style="width: 5%;color: rgb(6, 0, 0);"> 3 </div>
+                    <div class="white" style="width: 25%;color: rgb(236, 229, 229);">&nbsp;&nbsp; 3 PM </div>
+                    <div class="swap" style="width: 15%;color: rgb(6, 0, 0);"> 8 </div>
+                    <div class="white" style="width: 10%;color: rgb(236, 229, 229);">&nbsp;&nbsp;7 PM </div>
+                </div>
+            </div>
         </div>
-        
     </div>
 </body>
 </html>
