@@ -24,11 +24,11 @@
         }
         .status-on {
             background-color: #d4edda;
-            color: #011004;
+            color: #155724;
         }
         .status-off {
-            background-color: #e67b84;
-            color: #0b0102;
+            background-color: #f8d7da;
+            color: #721c24;
         }
         .section-title {
             padding: 10px;
@@ -36,11 +36,11 @@
             text-align: center;
             margin-bottom: 10px;
         }
-        .title-off {
-            background-color: #49854b;
-        }
         .title-on {
-            background-color: #e7767f;
+            background-color: #ffcccb;
+        }
+        .title-off {
+            background-color: #d3d3d3;
         }
         .maindashboard-button {
             background-color: #4CAF50; /* Green */
@@ -61,6 +61,10 @@
             align-items: center;
             margin-bottom: 20px;
         }
+        .header .right {
+            display: flex;
+            gap: 10px;
+        }
         .button {
             background-color: #4CAF50; /* Green */
             border: none;
@@ -71,7 +75,7 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
-        } 
+        }
         
     </style>
 </head>
@@ -95,74 +99,153 @@
     </div>
 </div>
 
-<div class="section-title title-on">Stations Offline </div>
+<div class="section-title title-on">Stations Offline</div>
 <table>
     <thead>
         <tr>
             <th>Station ID</th>
-            <th>Date & Time</th>
             <th>Zone</th>
             <th>Service Location</th>
+            <th>Last updated Date & Time</th>
             <th>Power Status</th>
+            <th>Aging</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>WMQI/SXMV1V1-00009</td>
-            <td>2023-10-07 02:17:19</td>
-            <td>Delhi</td>
-            <td>Delhi-Kashmere-Gate</td>
-            <td class="status-off">Offline</td>
-        </tr>
+        
         <tr>
             <td>WMQI/SXMV1V1-00010</td>
-            <td>2023-07-28 12:05:39</td>
             <td>Bengaluru</td>
             <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
         <tr>
             <td>WMQI/SXMV1V1-00010</td>
-            <td>2024-05-16 23:27:27</td>
-            <td>Hyderabad</td>
-            <td>Hyderabad-Tarnaka</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
         <tr>
-            <td>WMQI/SXMV1V1-00014</td>
-            <td>2024-04-11 20:09:16</td>
-            <td>Delhi</td>
-            <td>Delhi-Uttam-Nagar-USP</td>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
         <tr>
-            <td>WMQI/SXMV1V1-00015</td>
-            <td>2024-03-27 15:43:33</td>
-            <td>Chandigarh</td>
-            <td>IOCL-Chandigarh-Citco</td>
+            
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
         <tr>
-            <td>WMQI/SXMV1V1-00016</td>
-            <td>2024-03-27 15:33:01</td>
-            <td>Chandigarh</td>
-            <td>IOCL-Chandigarh-Sector21</td>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
         <tr>
-            <td>WMQI/SXMV1V1-00019</td>
-            <td>2024-05-31 08:04:04</td>
-            <td>Chandigarh</td>
-            <td>Chandigarh-Sector-41</td>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
         <tr>
-            <td>WMQI/SXMV1V1-00021</td>
-            <td>2024-07-03 12:32:31</td>
-            <td>Panchkula</td>
-            <td>Sajjag-Automobiles-Panchk...</td>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
             <td class="status-off">Offline</td>
+            <td>39 Min</td>
         </tr>
+        <tr>
+            
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        <tr>
+            
+            <td>WMQI/SXMV1V1-00010</td>
+            <td>Bengaluru</td>
+            <td>Mahadevpura</td>
+            <td>2023-07-28 12:05:39</td>
+            <td class="status-off">Offline</td>
+            <td>39 Min</td>
+        </tr>
+        
     </tbody>
 </table>
 
