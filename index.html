@@ -87,10 +87,10 @@
             height: 20px;
         }
         .yellow {
-            background-color: rgb(184, 225, 122);
+            background-color: rgb(47, 179, 21);
         }
-        .black {
-            background-color: #fa1f1f;
+        .red {
+            background-color: #e24106;
         }
         .blue {
             background-color: #1d3766;
@@ -108,15 +108,16 @@
             justify-content: start;
             align-items: start;
         }
+
         .blinking-button {
-            background-color: #d23f2b; /* Red */
+            background-color: #d23f2b; /* Green */
             border: none;
             color: white;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 25px;
+            font-size: 20px;
             cursor: pointer;
             border-radius: 5px;
             animation: blink 1s step-start 0s infinite;
@@ -184,13 +185,13 @@
             </a>
         </div>
         <div class="card">
-            <h1>HVAC OFF and Back Door Open Status</h1>
+            <h1>HVAC and Back Door Open Status</h1>
             <p>
                 <a href="HVACOFF.html" style="text-decoration: none; color: #ffffff;">
-                    HVAC OFF (29 & 3.3%) &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    HVAC (29 & 3.3%)
                 </a>
                 <a href="Backdooropenstatus.html" style="text-decoration: none; color: #ed9c11;">
-                    Backdoor Open (33 & 3.5%)
+                    Backdoor (33 & 3.5%)
                 </a>
             </p>
             <img src="HVAC&backdor.png" alt="HVAC&Backdoor">
@@ -207,31 +208,34 @@
                 </div>
                 <h3>Station have < 95% Swap Efficiency 11 (2.00%)</h3>
                 <div class="bar">
-                    <div class="black" style="width: 8%;color: black;"></div>
+                    <div class="red" style="width: 8%;color: black;"></div>
                 </div>
+                
             </div>
             <div>
                 
                 <a href="Swapefficiency.html" style="text-decoration: none; color: #ffffff;"> <h1>Swap Efficiency</h1></a>
-                <h3>Station with 100% Efficiency 567 (99.00%)</h3>
+                <a href="Swapefficiency.html" style="text-decoration: none; color: #ffffff;"><h3>Station with 99.90% Efficiency < 5 Min</h3></a>
                 <div class="bar">
                     <div class="yellow" style="width:95%;color: black; "> </div>
+                    <div class="red" style="width: 2%;color: black;"></div>
                 </div>
-                <h3>Station have < 95% Swap Efficiency 6 (1.00%)</h3>
+                <a href="Swapefficiency.html" style="text-decoration: none; color: #ffffff;"><h3>Station with 99.99% Efficiency < 15 Min</h3></a>
                 <div class="bar">
-                    <div class="black" style="width: 5%;color: black;"></div>
-                    
+                    <div class="yellow" style="width: 96%;color: black;"></div>
+                    <div class="red" style="width: 1%;color: black;"></div>
                 </div>
+                
             </div>
         </div>
         <div class="card">
             <h1>Preventive Maintenance</h1>
             <a href="pm.html" style="color: #ffffff; text-decoration: none;">
-                <span class="large-text positive inline-text">Completed: 134 (23.38%)</span>
+                <span class="large-text positive inline-text">Completed: 383 (67.76%)</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="large-text negative inline-text">Pending:24 (4.21%)</span>
+                <span class="large-text negative inline-text">Pending: 69 (12.24%)</span>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="large-text inline-text">Ongoing: 40 (7.01%)</span>
+                <span class="large-text inline-text">Ongoing: 115 (20.40%)</span>
                 <img src="PM.png" alt="Preventive Maintenance">
             </a>
         </div>
